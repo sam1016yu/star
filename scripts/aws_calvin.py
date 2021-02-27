@@ -41,7 +41,7 @@ def get_cmd(n, i):
 #   for ratio in ratios:    
     # for i in range(3):
 cmd = get_cmd(n, 0)
-cmd = '../bench_tpcc --logtostderr=1 --id=%s --servers="%s" --protocol=Calvin --partition_num=%d --threads=20 --batch_size=10000 --replica_group=4 --lock_manager=%d --query=mixed --neworder_dist=%d --payment_dist=%d' % (id, cmd, 12*n, lock, ratio, ratio)
+cmd = '../bench_tpcc --logtostderr=1 --id=%s --servers="%s" --protocol=Calvin --partition_num=%d --threads=20 --batch_size=10000 --replica_group=8 --lock_manager=%d --query=mixed --neworder_dist=%d --payment_dist=%d' % (id, cmd, 12*n, lock, ratio, ratio)
 print("###{}".format(ratio))
 # print(cmd.split(' '))
 subprocess.run(cmd.split(' '))
