@@ -46,7 +46,7 @@ def get_cmd(n, i):
 ips = [ip+":"+port for ip in ins]
 # print(ips)
 ips = ";".join(ips)
-cmd = '../bench_tpcc --logtostderr=1 --id=%s --servers="%s" --protocol=Calvin --partition_num=%d --threads=%d --batch_size=10000 --replica_group=8 --lock_manager=%d --query=mixed --neworder_dist=%d --payment_dist=%d' % (id, ips, 12*n, thread, lock, ratio, ratio)
+cmd = '../bench_tpcc --logtostderr=1 --id=%s --servers="%s" --protocol=Calvin --partition_num=%d --threads=%d --batch_size=10000 --replica_group=8 --lock_manager=%d --query=mixed --neworder_dist=%d --payment_dist=%d' % (id, ips, 20*n, thread, lock, ratio, ratio)
 print("###{}".format(ratio))
 # print(shlex.split(cmd))
 subprocess.run(shlex.split(cmd))
